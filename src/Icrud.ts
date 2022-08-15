@@ -1,8 +1,8 @@
 import { User } from "./user";
 
-export interface ICrud {
-  create(item: User): void;
-  read(): User[];
-  update(event: any, item: User): void;
-  delete(item: User): void;
+export interface ICrud<T> {
+  create(item: T): void;
+  read(): T[];
+  update(event: any, item: T): void;
+  delete(item: T): void;
 }
