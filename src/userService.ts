@@ -3,7 +3,7 @@ import { objOfHomePage } from "./app.js";
 import { ICrud } from "./Icrud.js";
 import { Role, User } from "./user.js";
 
-export class UserService implements ICrud {
+export class UserService implements ICrud<User> {
   users: User[] = [];
   constructor() {
     this.loadData();
