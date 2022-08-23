@@ -1,6 +1,30 @@
 import { Role, User } from "./user.js";
 import { UserService } from "./userService.js";
 
+function Logger(d: Date) {
+  return function (_: Function) {
+    const DateTime = document.getElementById(
+      "date-container"
+    ) as HTMLDivElement;
+    let dt =
+      d.getDate() +
+      " " +
+      d.toLocaleString("en-US", { month: "long" }) +
+      " " +
+      d.getFullYear() +
+      " ::Time: " +
+      d.getHours() +
+      ":" +
+      d.getMinutes();
+    +":" + d.getSeconds();
+
+    DateTime.innerHTML = dt;
+
+    // console.log(dt);
+  };
+}
+
+@Logger(new Date())
 export class HomePage {
   tableContainer = document.getElementById("table-container");
   loadBtn: HTMLButtonElement;
