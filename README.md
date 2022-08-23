@@ -6,6 +6,9 @@ Create a HTML page showing a list of users in a tabular format. The data should 
 
 * Make the user CRUD using generic. 
 
+*  Make a date time formatter decorator. Use the decorator to format date time fields.
+
+
 1. Run : npm install
 2. Run : tsc
 3. Run : npm start
